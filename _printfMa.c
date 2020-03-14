@@ -47,23 +47,22 @@ int _Prprintf(va_list format)
 }
 /**
  * _dprintf - unsigned int
- * @format: unsigned
- * Return: int
+ * @num: unsigned int
+ * Return: void
  */
-int _dprintf(va_list format)
+void _dprintf(unsigned int num)
 {
-	unsigned int signe, count;
-	unsigned int i;
+	int dig;
 
-	i = va_arg(format, unsigned int)
-	signe = 0;
-	if (signe >= 0)
+	if (num / 10 != 0)
 	{
-		count++;
-		write(1, &signe, 1);
-		i += 1;
+		_dprintf(num / 10);
 	}
-	return (i);
+
+	dig = ((num % 10) + '0');
+
+	write(1, &dig, 1);
+	
 }
 /**
  * _iprintf - print integer format
@@ -91,6 +90,6 @@ int _iprintf(va_list format)
 		num = num / 10;
 		count += 1;
 	}
-	_iprintf((unsigned int)i);
+	_dprintf((unsigned int)i);
 	return (count);
 }
