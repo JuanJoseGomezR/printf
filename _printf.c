@@ -39,7 +39,7 @@ int _iprintf(va_list format)
 	if (i < 0)
 	{
 		count++;
-		write(1, &negSign, 1);
+		write(1, &negativ, 1);
 		i = -i;
 	}
 	while (num != 0)
