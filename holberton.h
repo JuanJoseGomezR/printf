@@ -5,7 +5,7 @@
 int _printf(const char *format, ...);
 int _cprintf(va_list format);
 int _sprintf(va_list format);
-int _dprintf(va_list format);
+int _dprintf(unsigned int num);
 int _Prprintf(va_list format);
 int _iprintf(va_list format);
 int _bprintf(va_list format);
