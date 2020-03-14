@@ -1,0 +1,19 @@
+.\" Handbook for _printf.
+.\" Contact 1579@holbertonschool.com to correct error or typos
+.TH man 3 "14/03/Mar 2020" "1.0" "_printf man page"
+.SH NAME
+_printf - create a new LDAP
+.SH SYPNOSIS
+_printf [USERNAME]
+.SH DESCRIPTION
+This "_printf" was created to imitate the real "printf" function that comes by default in the c/c++ compiler libraries.
+.SH OPTIONS
+-[%d] = unsigned int
+.SH SEE ALSO
+pag (1)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Juan Jose Gómez Rodríguez (1579@holbertonschool.com)
+.SH PARTNER
+Jose Omar Espinosa Ramirez (1630@holbertonschool.com)
