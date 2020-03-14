@@ -6,7 +6,13 @@
   */
 int _cprintf(va_list format)
 {
-	return(write(1, &c, 1));
+	char store;
+
+	store = va_arg(format, int);
+
+	write(1, &c, 1);
+
+	return(1);
 }
 /**
   * _sprintf - print string format
@@ -17,6 +23,7 @@ int _sprintf(va_list format)
 {
 	int i;
 	char *ptr;
+	char *s;
 
 	ptr = va_arg(format, char *);
 
