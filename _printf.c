@@ -18,7 +18,7 @@ int _sprintf(va_list format)
 	int i;
 	char *ptr;
 
-	ptr = va_arg(args, char *);
+	ptr = va_arg(format, char *);
 
 	for (i = 0; s[i]; i++)
 	{
@@ -31,7 +31,7 @@ int _iprintf(va_list format)
 {
 	char negativ;
 	int i, count, num;
-	i = va_arg(args, int);
+	i = va_arg(format, int);
 	num = i;
 	count = 0;
 	negativ = '-';
@@ -42,9 +42,9 @@ int _iprintf(va_list format)
 		write(1, &negSign, 1);
 		i = -i;
 	}
-	while (numCopy != 0)
+	while (num != 0)
 	{
-		num = numCopy / 10;
+		num = num / 10;
 		count += 1;
 	}
 	_iprintf((unsigned int)i);
