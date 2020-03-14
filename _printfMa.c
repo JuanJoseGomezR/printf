@@ -46,6 +46,26 @@ int _Prprintf(va_list format)
 	return (1);
 }
 /**
+ * _dprintf - unsigned int
+ * @format: unsigned
+ * Return: int
+ */
+int _dprintf(va_list format)
+{
+	unsigned int signe, count;
+	unsigned int i;
+
+	i = va_arg(format, unsigned int)
+	signe = 0;
+	if (signe >= 0)
+	{
+		count++;
+		write(1, &signe, 1);
+		i += 1;
+	}
+	return (i);
+}
+/**
  * _iprintf - print integer format
  * @format: integer
  * Return: int
