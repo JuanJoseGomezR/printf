@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
-  * _cprintf - prints char format
-  * @format: type of format
-  * Return: length
-  */
+ * _cprintf - prints char format
+ * @format: type of format
+ * Return: length
+ */
 int _cprintf(va_list format)
 {
 	char store;
@@ -15,10 +15,10 @@ int _cprintf(va_list format)
 	return (1);
 }
 /**
-  * _sprintf - print string format
-  * @format: string
-  * Return: length
-  */
+ * _sprintf - print string format
+ * @format: string
+ * Return: length
+ */
 int _sprintf(va_list format)
 {
 	int i;
@@ -28,16 +28,28 @@ int _sprintf(va_list format)
 
 	for (i = 0; ptr[i]; i++)
 	{
-	write(1, &ptr, 1);
+		write(1, &ptr, 1);
 		ptr++;
 	}
 	return (i);
 }
 /**
-  * _iprintf - print integer format
-  * @format: integer
-  * Return: int
-  */
+ * _Prprintf - percentage
+ * @format: symbol
+ * Return: symbol
+ */
+int _Prprintf(va_list format)
+{
+	char symbol = 37;
+
+	write(1, &symbol, 1);
+	return (1);
+}
+/**
+ * _iprintf - print integer format
+ * @format: integer
+ * Return: int
+ */
 int _iprintf(va_list format)
 {
 	char negativ;

@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "holberton.h"
-#include <unistd.h>
 /**
   * _write - prints
   * @char: var

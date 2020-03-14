@@ -1,7 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 #include <stdarg.h>
-int _write(char);
+#include <unistd.h>
 int _printf(const char *format, ...);
 int _cprintf(va_list format);
 int _sprintf(va_list format);
