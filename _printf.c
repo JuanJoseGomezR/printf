@@ -27,6 +27,10 @@ int _sprintf(va_list format)
 	}
 	return (i);
 }
+int _iprintf(va_list format)
+{
+
+}
 /**
  * _printf - function of option struct
  * @format: parameter pointer
