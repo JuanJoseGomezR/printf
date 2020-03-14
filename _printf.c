@@ -29,7 +29,26 @@ int _sprintf(va_list format)
 }
 int _iprintf(va_list format)
 {
+	char negativ;
+	int i, count, num;
+	i = va_arg(args, int);
+	num = i;
+	count = 0;
+	negativ = '-';
 
+	if (i < 0)
+	{
+		count++;
+		write(1, &negSign, 1);
+		i = -i;
+	}
+	while (numCopy != 0)
+	{
+		num = numCopy / 10;
+		count += 1;
+	}
+	_iprintf((unsigned int)i);
+	return (count);
 }
 /**
  * _printf - function of option struct
