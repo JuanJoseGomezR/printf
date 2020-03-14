@@ -1,6 +1,5 @@
 #include "holberton.h"
 /**
-<<<<<<< HEAD
   * _cprintf - prints char format
   * @format: type of format
   * Return: length
@@ -28,7 +27,7 @@ int _sprintf(va_list format)
 	}
 	return (i);
 }
-=======
+/**
  * _printf - function of option struct
  * @format: parameter pointer
  * Return: option of struct
@@ -50,4 +49,3 @@ int _printf(const char *format, ...)
 		{ "X", _Xprintf},
 	};
 }
->>>>>>> 89d1baf466fcabee5ef609e8575e0ae847f7d20c
