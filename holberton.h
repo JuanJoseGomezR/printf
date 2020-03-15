@@ -2,6 +2,9 @@
 #define HOLBERTON_H
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
+
+int _strlen(char *s);
 int _printf(const char *format, ...);
 int _cprintf(va_list format);
 int _sprintf(va_list format);
@@ -15,6 +18,7 @@ int _uprintf(va_list format);
 int _oprintf(va_list format);
 int _xprintf(va_list format);
 int _Xprintf(va_list format);
+
 /**
   * struct format - List option
   * @op: pointer option
