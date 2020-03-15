@@ -19,7 +19,7 @@ int _strlen(char *s)
  * @format: unsd int to binary
  * Return: binary length
  */
-int _bprintf(va_list format);
+int _bprintf(va_list format)
 {
 	unsigned int binary [2];
 	unsigned int num;
@@ -37,4 +37,25 @@ int _bprintf(va_list format);
 		write(1, &binary, 1);
 	}
 	return (strlen(binary));
+}
+
+int _rprintf(va_list format)
+{
+	char *store;
+	int i;
+	int len = 0;
+
+	store = va_arg(format, char *);
+
+	for (i = 0; store[i]; i++)
+	{
+	}
+	len = i;
+	i = i - 1;
+	while (i >= 0)
+	{
+		write(str[i]);
+		i--;
+	}
+	return(len);
 }
