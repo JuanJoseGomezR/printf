@@ -1,34 +1,19 @@
 #include "holberton.h"
 /**
- * _strlen - function that returns the length of a string.
- * @s : s is a character
- * Return: value is i
- */
-int _strlen(char *s)
-{
-	int i;
-
-	while (*(s + i))
-	{
-		i++;
-	}
-	return (i);
-}
-/**
- * _brpintf - convert into binaries
+ * _bprintf - convert into binaries
  * @format: unsd int to binary
  * Return: binary length
  */
 int _bprintf(va_list format)
 {
-	unsigned int binary [2];
+	unsigned int binary[2];
 	unsigned int num;
 	unsigned int count = 0;
 	int i = 0;
 
 	num = va_arg(format, unsigned int);
 
-	for (i = 0; num[i]; i++)
+	for (i = 0; num > 0; i++)
 	{
 		binary[i] = num % 2;
 		num /= 2;
@@ -40,7 +25,11 @@ int _bprintf(va_list format)
 	}
 	return (count);
 }
-
+/**
+  * _rprintf - prints reverse string
+  * @format: rev string
+  * Return: int
+  */
 int _rprintf(va_list format)
 {
 	char *store;
@@ -59,5 +48,5 @@ int _rprintf(va_list format)
 		_putchar(store[i]);
 		i--;
 	}
-	return(len);
+	return (len);
 }
