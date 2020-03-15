@@ -23,6 +23,7 @@ int _bprintf(va_list format)
 {
 	unsigned int binary [2];
 	unsigned int num;
+	unsigned int count = 0;
 	int i = 0;
 
 	num = va_arg(format, unsigned int);
@@ -35,8 +36,9 @@ int _bprintf(va_list format)
 	for (i = i - 1; i >= 0; i--)
 	{
 		write(1, &binary, 1);
+		count++;
 	}
-	return (strlen(binary));
+	return (count);
 }
 
 int _rprintf(va_list format)
@@ -54,7 +56,7 @@ int _rprintf(va_list format)
 	i = i - 1;
 	while (i >= 0)
 	{
-		write(str[i]);
+		_putchar(store[i]);
 		i--;
 	}
 	return(len);
