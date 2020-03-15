@@ -26,10 +26,12 @@ int _sprintf(va_list format)
 
 	ptr = va_arg(format, char *);
 
+	if (ptr == NULL)
+		ptr = "(NULL)";
+
 	for (i = 0; ptr[i]; i++)
 	{
-		write(1, &ptr, 1);
-		ptr++;
+		_putchar(ptr[i]);
 	}
 	return (i);
 }
