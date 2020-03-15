@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 /**
  * _printf - function of option struct
  * @format: parameter pointer
@@ -16,8 +17,33 @@ int _printf(const char *format, ...)
 		{ "r", _rprintf},
 		{ "R", _Rprintf},
 		{ "u", _uprintf},
-		{ "o", _oprintf},
 		{ "x", _xprintf},
-		{ "X", _Xprintf},
+		{NULL, NULL},
 	};
+va_list valist;
+int i, j, x;
+
+j = 0;
+va_start(valist, format);
+if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+return (0);
+for (i = 0; format[i]; i++)
+{
+	for (x = 0; option[x].type != '\0'; x++)
+	{
+		if (format[i] == '%')
+		{
+			if (format[i + 1] == option[x].type)
+			{
+				i = i + 2;
+				j += option[x].f(valist);
+			}
+			else if (format[i + 1] == '%')
+				i = i + 1;
+		}
+	}
+	j += _cprintf(format[i]);
+}
+va_end(valist);
+return (j);
 }

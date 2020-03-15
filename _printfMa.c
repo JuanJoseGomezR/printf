@@ -62,7 +62,7 @@ void _dprintf(unsigned int num)
 	dig = ((num % 10) + '0');
 
 	write(1, &dig, 1);
-	
+
 }
 /**
  * _iprintf - print integer format
