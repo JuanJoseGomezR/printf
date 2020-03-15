@@ -27,9 +27,6 @@ int _bprintf(va_list format);
 
 	num = va_arg(format, unsigned int);
 
-	if ((format == NULL) || (format[0] = '%' && format[1] == '\0'))
-		return (0);
-
 	for (i = 0; num[i]; i++)
 	{
 		binary[i] = num % 2;
