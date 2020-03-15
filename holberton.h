@@ -3,7 +3,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-
+int _putchar(char c);
 int _strlen(char *s);
 int _printf(const char *format, ...);
 int _cprintf(va_list format);
@@ -27,6 +27,6 @@ int _Xprintf(va_list format);
 typedef struct format
 {
 	char *op;
-	int (*f)(va_list print);
+	int (*f)();
 } _format;
 #endif
