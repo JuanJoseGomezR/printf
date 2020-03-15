@@ -8,12 +8,12 @@
 int _printf(const char *format, ...)
 {
 	_format option[] = {
-		{ "c", _cprintf},
-		{ "s", _sprintf},
-		{ "d", _iprintf},
-		{ "%", _Prprintf},
-		{ "i", _iprintf},
-		{ "b", _bprintf},
+		{'c', _cprintf},
+		{'s', _sprintf},
+		{'d', _iprintf},
+		{'%', _Prprintf},
+		{'i', _iprintf},
+		{'b', _bprintf},
 		{'\0', NULL},
 	};
 	va_list valist;
