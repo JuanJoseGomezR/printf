@@ -26,7 +26,7 @@ int _Xprintf(va_list format);
   */
 typedef struct format
 {
-	char op;
-	int (*f)();
+	char *op;
+	int (*f)(va_list);
 } _format;
 #endif
