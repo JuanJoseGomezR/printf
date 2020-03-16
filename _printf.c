@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 	};
 	va_list valist;
 	int i, j, x;
+	int (*f)(va_list);
 
 	j = 0;
 	va_start(valist, format);
