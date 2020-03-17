@@ -50,19 +50,24 @@ int _Prprintf(__attribute__((unused))va_list format)
  * @num: unsigned int
  * Return: void
  */
-void _dprintf(unsigned int num)
+int _dprintf(unsigned int num)
 {
-	int dig;
+	int lengt;
+	unsigned int n = num;
+	int oper;
+	
+	oper = 1;
+	lengt = 0;
 
-	if (num / 10 != 0)
+	for (; n / oper > 9 ;)
+		oper *= 10;
+	for (; oper != 0 ;)
 	{
-		_dprintf(num / 10);
+		lengt = lengt + _putchar('0' + n / oper);
+		n = n % oper;
+		oper = oper / 10;
 	}
-
-	dig = ((num % 10) + '0');
-
-	write(1, &dig, 1);
-
+	return (lengt);
 }
 /**
  * _iprintf - print integer format
