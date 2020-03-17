@@ -34,9 +34,7 @@ int _sprintf(va_list format)
  */
 int _Prprintf(__attribute__((unused))va_list format)
 {
-	char symbol = 37;
-
-	write(1, &symbol, 1);
+	_putchar('%');
 	return (1);
 }
 /**

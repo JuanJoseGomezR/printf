@@ -4,40 +4,60 @@
  * @format: parameter pointer
  * Return: option of struct
  */
-int _printf(const char *format, ...)
+int get_print(va_list format, char c)
 {
+	int i, cont = 0;
+
 	_format option[] = {
 		{'c', _cprintf},
 		{'s', _sprintf},
 		{'d', _iprintf},
 		{'%', _Prprintf},
 		{'i', _iprintf},
-		/*{'b', _bprintf},*/
+		{'\0', NULL}
+		/*{'b', _bprintf}*/
 	};
-	va_list valist;
-	int i, j, x;
-
-	j = 0;
-	va_start(valist, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (0);
-	for (i = 0; format[i]; i++)
+	for (i = 0; option[i].op; i++)
 	{
-		for (x = 0; option[x].op != '\0'; x++)
+		if (c == option[i].op)
 		{
-			if (format[i] == '%')
-			{
-				if (format[i + 1] == option[x].op)
-				{
-					i = i + 2;
-					j += option[x].f(valist);
-				}
-				else if (format[i + 1] == '%')
-					i = i + 1;
-			}
+			cont += (option[i].f(format));
 		}
-		j = j + _putchar(format[i]);
+	}
+	return (cont);
+}
+
+int _printf(const char *format, ...)
+{
+	int cont = 0, i;
+
+	va_list valist;
+
+	va_start(valist, format);
+
+	if (format == NULL)
+		return (-1);
+	for (i = 0; format && format[i]; i++)
+	{
+		if (format[i] && format[i] != '%')
+		{
+			cont += _putchar(format[i]);
+			continue;
+		}
+		if (!format[i])
+		{
+			return (cont);
+		}
+		if (format[i] == '%')
+		{
+			while (format[i + 1] == ' ')
+				i++;
+			if (format[i + 1] == '\0')
+				return (-1);
+			cont += get_print(valist, format[i + 1]);
+			i++;
+		}
 	}
 	va_end(valist);
-	return (j);
+	return (cont);
 }

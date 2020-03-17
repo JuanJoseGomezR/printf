@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
-
+int get_print(va_list format, char c);
 int _printfnum(va_list format);
 int _putchar(char c);
 int _strlen(char *s);
