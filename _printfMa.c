@@ -71,25 +71,28 @@ void _dprintf(unsigned int num)
  */
 int _iprintf(va_list format)
 {
-	char negativ;
-	int i, count, num;
+	int i, lengt, oper;
+	unsigned int num;
+
+	oper =  1;
+	lengt = 0;
 
 	i = va_arg(format, int);
-	num = i;
-	count = 0;
-	negativ = '-';
 
 	if (i < 0)
 	{
-		count++;
-		write(1, &negativ, 1);
-		i = -i;
+		lengt = _putchar('-');
+		num = i * -1;
 	}
-	while (num != 0)
+	else
+		num = i;
+	for (; num / oper > 9;)
+		div = div * 10;
+	for (; oper != 0;)
 	{
-		num = num / 10;
-		count += 1;
+		lengt = lengt + _putchar('0' + num / oper);
+		num = num % oper;
+		oper = oper / 10;
 	}
-	_dprintf((unsigned int)i);
-	return (count);
+	return (lengt);
 }
