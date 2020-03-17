@@ -6,24 +6,32 @@
  */
 int _bprintf(va_list format)
 {
-	unsigned int binary[2];
+	unsigned int binary[32];
 	unsigned int num;
 	unsigned int count = 0;
 	int i = 0;
 
 	num = va_arg(format, unsigned int);
 
-	for (i = 0; num > 0; i++)
+	if (num <= 1)
 	{
-		binary[i] = num % 2;
-		num /= 2;
-	}
-	for (i = i - 1; i >= 0; i--)
-	{
-		write(1, &binary, 1);
+		_putchar(num + '0');
 		count++;
 	}
-	return (count);
+	else
+	{
+		for (i = 0; num > 0; i++)
+		{
+			binary[i] = num % 2;
+			num /= 2;
+		}
+		for (i = i - 1; i >= 0; i--)
+		{
+			write(1, &binary, 1);
+			count++;
+		}
+	}
+		return (count);
 }
 /**
   * _rprintf - prints reverse string
