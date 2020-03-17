@@ -9,11 +9,10 @@ int _printf(const char *format, ...)
 	_format option[] = {
 		{'c', _cprintf},
 		{'s', _sprintf},
-		{'d', _iprintf},
+		{'d', _printfnum},
 		{'%', _Prprintf},
-		{'i', _iprintf},
-		{'b', _iprintf},
-		{'\0', NULL}
+		{'i', _printfnum},
+		/*{'b', _bprintf},*/
 	};
 	va_list valist;
 	int i, j, x;
