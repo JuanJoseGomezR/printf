@@ -1,4 +1,4 @@
-![] (https://image.flaticon.com/icons/png/128/29/29302.png) ![] (https://image.flaticon.com/icons/png/128/23/23930.png) ![] (https://image.flaticon.com/icons/png/128/107/107788.png) ![] (https://image.flaticon.com/icons/png/128/65/65881.png)
+![](https://image.flaticon.com/icons/png/128/29/29302.png) ![](https://image.flaticon.com/icons/png/128/23/23930.png)![](https://image.flaticon.com/icons/png/128/107/107788.png) ![](https://image.flaticon.com/icons/png/128/65/65881.png)
 
 # 0x11. C - printf
 
@@ -35,7 +35,7 @@ __This project is the simulation of the real function in the programming languag
 	
 ## Code Editor:
 
-	![] (https://ventgrey.github.io/vent-blog/images/vim.png)
+	![](https://ventgrey.github.io/vent-blog/images/vim.png)
 
 
 #### C code:
