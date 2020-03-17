@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{'d', _iprintf},
 		{'%', _Prprintf},
 		{'i', _iprintf},
-		{'b', _bprintf},
+		{'b', _iprintf},
 		{'\0', NULL}
 	};
 	va_list valist;

@@ -73,6 +73,8 @@ int _iprintf(va_list format)
 {
 	int i, lengt, oper;
 	unsigned int num;
+	int str;
+	char negative = '-';
 
 	oper =  1;
 	lengt = 0;
@@ -81,16 +83,17 @@ int _iprintf(va_list format)
 
 	if (i < 0)
 	{
-		lengt = _putchar('-');
+		lengt = write(1, &negative, 1);
 		num = i * -1;
 	}
 	else
 		num = i;
 	for (; num / oper > 9;)
-		div = div * 10;
+		oper = oper * 10;
 	for (; oper != 0;)
 	{
-		lengt = lengt + _putchar('0' + num / oper);
+		str = ('0' + num / oper);
+		lengt = lengt + write(1, &str, 1);
 		num = num % oper;
 		oper = oper / 10;
 	}
