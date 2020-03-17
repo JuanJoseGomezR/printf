@@ -55,7 +55,7 @@ int _dprintf(unsigned int num)
 	int lengt;
 	unsigned int n = num;
 	int oper;
-	
+
 	oper = 1;
 	lengt = 0;
 
@@ -74,7 +74,7 @@ int _dprintf(unsigned int num)
  * @format: integer
  * Return: int
  */
-int _iprintf(va_list format)
+int _printfnum(va_list format)
 {
 	int i, lengt, oper;
 	unsigned int num;
