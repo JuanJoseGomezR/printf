@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- * _printf - function of option struct
+ * get_print - function of option struct
  * @format: parameter pointer
+ * @c: paramt
  * Return: option of struct
  */
 int get_print(va_list format, char c)
@@ -14,8 +15,8 @@ int get_print(va_list format, char c)
 		{'d', _iprintf},
 		{'%', _Prprintf},
 		{'i', _iprintf},
+		{'b', _bprintf},
 		{'\0', NULL}
-		/*{'b', _bprintf}*/
 	};
 	for (i = 0; option[i].op; i++)
 	{
@@ -26,7 +27,11 @@ int get_print(va_list format, char c)
 	}
 	return (cont);
 }
-
+/**
+  * _printf - prints formats
+  * @format: arguments passed
+  * Return: int
+  */
 int _printf(const char *format, ...)
 {
 	int cont = 0, i;

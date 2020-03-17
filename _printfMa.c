@@ -62,7 +62,7 @@ int _dprintf(unsigned int num)
 	return (lengt);
 }
 /**
- * _iprintf - print integer format
+ * _printfnum - print integer format
  * @format: integer
  * Return: int
  */
