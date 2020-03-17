@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-  * _printfnum - prints int
+  * _iprintf - prints int
   * @format: args
   * Return: int
   */
