@@ -6,13 +6,7 @@
  */
 int _cprintf(va_list format)
 {
-	char store;
-
-	store = va_arg(format, int);
-
-	write(1, &store, 1);
-
-	return (1);
+	return (_putchar(va_arg(format, int)));
 }
 /**
  * _sprintf - print string format
@@ -22,16 +16,16 @@ int _cprintf(va_list format)
 int _sprintf(va_list format)
 {
 	int i;
+	int count = 0;
 	char *ptr = va_arg(format, char *);
 
 	if (ptr == NULL)
-		ptr = "(NULL)";
-
+		return (write(1, "(null)", 6));
 	for (i = 0; ptr[i]; i++)
 	{
-		_putchar(ptr[i]);
+		count += _putchar(ptr[i]);
 	}
-	return (i);
+	return (count);
 }
 /**
  * _Prprintf - percentage
