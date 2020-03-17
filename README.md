@@ -1,11 +1,11 @@
-![](https://image.flaticon.com/icons/png/128/29/29302.png) ![](https://image.flaticon.com/icons/png/128/23/23930.png)![](https://image.flaticon.com/icons/png/128/107/107788.png) ![](https://image.flaticon.com/icons/png/128/65/65881.png)
+![] (https://image.flaticon.com/icons/png/128/29/29302.png) ![] (https://image.flaticon.com/icons/png/128/23/23930.png) ![] (https://image.flaticon.com/icons/png/128/107/107788.png) ![] (https://image.flaticon.com/icons/png/128/65/65881.png)
 
-#0x11. C - printf
+# 0x11. C - printf
 
 __This project is the simulation of the real function in the programming language "C/C++". Therefore the options described below will be detailed for a better understanding of this project:__
 - %r
 
-##Requirements:
+## Requirements:
 
 - General Allowed editors: vi, vim, emacs.
 - All your files will be compiled on Ubuntu 14.04 LTS.
@@ -21,9 +21,9 @@ __This project is the simulation of the real function in the programming languag
 - All your header files should be include guarded.
 - Note that we will not provide the _putchar function for this project.
 
-###More Info:
+### More Info:
 
-####Authorized functions and macros:
+#### Authorized functions and macros:
 
 - write (man 2 write)
 	- malloc (man 3 malloc)
@@ -33,12 +33,12 @@ __This project is the simulation of the real function in the programming languag
 	- va_copy (man 3 va_copy)
 	- va_arg (man 3 va_arg)
 	
-##Code Editor:
+## Code Editor:
 
-	![](https://ventgrey.github.io/vent-blog/images/vim.png)
+	![] (https://ventgrey.github.io/vent-blog/images/vim.png)
 
 
-####C code:
+#### C code:
 
 
 ```C
@@ -48,13 +48,13 @@ int main(void)
 }
 ```
 
-##AUTHOR:
+## AUTHOR:
 
 - Juan Jose Gómez Rodríguez 
 - Email: 1579@holbertonschool.com
 - GitUser: @JuanJoseGomezR
 
-##PARTNER:
+## PARTNER:
 
 - Jose Omar Espinosa Ramirez 
 - Email: 1630@holbertonschool.com
