@@ -20,7 +20,7 @@ int _bprintf(va_list format)
 	}
 	for (i = i - 1; i >= 0; i--)
 	{
-		_write(binary);
+		write(1, &binary, 1);
 		count++;
 	}
 	return (count);
@@ -45,7 +45,7 @@ int _rprintf(va_list format)
 	i = i - 1;
 	while (i >= 0)
 	{
-		_write(store[i]);
+		_putchar(store[i]);
 		i--;
 	}
 	return (len);

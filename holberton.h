@@ -1,14 +1,15 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 #include <stdarg.h>
-#include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
-int _write(char c);
+#include <stdio.h>
+int _putchar(char c);
 int _strlen(char *s);
 int _printf(const char *format, ...);
 int _cprintf(va_list format);
 int _sprintf(va_list format);
-int _dprintf(unsigned int num);
+void _dprintf(unsigned int num);
 int _Prprintf(va_list format);
 int _iprintf(va_list format);
 int _bprintf(va_list format);
@@ -26,7 +27,7 @@ int _Xprintf(va_list format);
   */
 typedef struct format
 {
-	char *op;
+	char op;
 	int (*f)(va_list);
 } _format;
 #endif

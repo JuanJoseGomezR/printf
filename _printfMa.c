@@ -6,7 +6,12 @@
  */
 int _cprintf(va_list format)
 {
-	_write(va_arg(format, int));
+	char store;
+
+	store = va_arg(format, int);
+
+	write(1, &store, 1);
+
 	return (1);
 }
 /**
@@ -20,11 +25,11 @@ int _sprintf(va_list format)
 	char *ptr = va_arg(format, char *);
 
 	if (ptr == NULL)
-		ptr = "(null)";
+		ptr = "(NULL)";
 
-	for (i = 0; ptr[i] != '\0'; i++)
+	for (i = 0; ptr[i]; i++)
 	{
-		_write(ptr[i]);
+		_putchar(ptr[i]);
 	}
 	return (i);
 }
@@ -37,7 +42,7 @@ int _Prprintf(__attribute__((unused))va_list format)
 {
 	char symbol = 37;
 
-	_write(symbol);
+	write(1, &symbol, 1);
 	return (1);
 }
 /**
@@ -45,19 +50,18 @@ int _Prprintf(__attribute__((unused))va_list format)
  * @num: unsigned int
  * Return: void
  */
-int _dprintf(unsigned int num)
+void _dprintf(unsigned int num)
 {
 	int dig;
 
 	if (num / 10 != 0)
 	{
-		_iprintf(num / 10);
+		_dprintf(num / 10);
 	}
 
 	dig = ((num % 10) + '0');
 
-	_write(dig);
-	return (num);
+	write(1, &dig, 1);
 
 }
 /**
@@ -78,7 +82,7 @@ int _iprintf(va_list format)
 	if (i < 0)
 	{
 		count++;
-		_write(negativ);
+		write(1, &negativ, 1);
 		i = -i;
 	}
 	while (num != 0)

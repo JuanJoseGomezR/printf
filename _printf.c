@@ -9,11 +9,11 @@ int _printf(const char *format, ...)
 	_format option[] = {
 		{'c', _cprintf},
 		{'s', _sprintf},
-		{'d', _dprintf},
+		{'d', _iprintf},
 		{'%', _Prprintf},
 		{'i', _iprintf},
 		{'b', _bprintf},
-		{NULL, NULL}
+		{'\0', NULL}
 	};
 	va_list valist;
 	int i, j, x;
@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 					i = i + 1;
 			}
 		}
-		j = j + _write(format[i]);
+		j = j + _putchar(format[i]);
 	}
 	va_end(valist);
 	return (j);
