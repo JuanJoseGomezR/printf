@@ -35,7 +35,7 @@ int _sprintf(va_list format)
 int _Prprintf(__attribute__((unused))va_list format)
 {
 	_putchar('%');
-	return (-1);
+	return (1);
 }
 /**
  * _dprintf - unsigned int
