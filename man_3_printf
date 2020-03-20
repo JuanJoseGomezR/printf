@@ -8,7 +8,10 @@ _printf [USERNAME]
 .SH DESCRIPTION
 This "_printf" was created to imitate the real "printf" function that comes by default in the c/c++ compiler libraries.
 .SH OPTIONS
--[%d] = unsigned int
+\n %c -> This option prints characters
+\n %s -> This option prints a string of characters
+\n d -> This option prints a signed integer in decimal base notation
+\n i -> This option prints a signed integer
 .SH SEE ALSO
 pag (1)
 .SH BUGS
