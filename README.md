@@ -95,6 +95,9 @@ After using our compiler with the corresponding flags, we move on to use the "./
 ```shell
 gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
 ```
+```shell
+$ ./a.out
+```
 ## AUTHOR:
 
 - Juan Jose Gómez Rodríguez 
