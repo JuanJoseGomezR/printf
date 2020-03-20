@@ -90,7 +90,11 @@ int  main ( nulo )
 	retorno ( 0 );
 }
 ```
-
+## How to compile
+After using our compiler with the corresponding flags, we move on to use the "./a" executable as shown below.
+```shell
+gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
+```
 ## AUTHOR:
 
 - Juan Jose Gómez Rodríguez 
