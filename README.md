@@ -3,7 +3,10 @@
 # 0x11. C - printf
 
 __This project is the simulation of the real function in the programming language "C/C++". Therefore the options described below will be detailed for a better understanding of this project:__
-- %r
+- %c -> This option prints characters
+- %s -> This option prints a string of characters 
+- d -> This option prints a signed integer in decimal base notation
+- i -> This option prints a signed integer
 
 ## Requirements:
 
@@ -38,13 +41,53 @@ __This project is the simulation of the real function in the programming languag
 ![](https://ventgrey.github.io/vent-blog/images/vim.png)
 
 
-#### C code:
+#### Main C code:
 
 
 ```C
-int main(void)
-{
+# include  < limits.h >
+# include  < stdio.h >
+# incluye  " holberton.h "
 
+/ * *
+ * principal - Punto de entrada
+ * *
+ * Regreso: Siempre 0
+ * /
+int  main ( nulo )
+{
+	int len;
+	int len2;
+	unsigned  int ui;
+	nulo * addr;
+
+	len = _printf ( " Intentemos imprimir una oración simple. \ n " );
+	len2 = printf ( " Intentemos imprimir una oración simple. \ n " );
+	ui = ( unsigned  int ) INT_MAX + 1024 ;
+	addr = ( nulo *) 0x7ffe637541f0 ;
+	_printf ( " Longitud: [ % d , % i ] \ n " , len, len);
+	printf ( " Longitud: [ % d , % i ] \ n " , len2, len2);
+	_printf ( " Negativo: [ % d ] \ n " , - 762534 );
+	printf ( " Negativo: [ % d ] \ n " , - 762534 );
+	_printf ( "Sin signo : [ % u ] \ n " , ui);
+	printf ( "Sin signo: [ % u ] \ n " , ui);
+	_printf ( " octal sin signo : [ % o ] \ n " , ui);
+	printf ( " octal sin signo: [ % o ] \ n " , ui);
+	_printf ( " Hexadecimal sin signo : [ % x , % X ] \ n " , ui, ui);
+	printf ( " Hexadecimal sin signo: [ % x , % X ] \ n " , ui, ui);
+	_printf ( " Carácter: [ % c ] \ n " , ' H ' );
+	printf ( " Carácter: [ % c ] \ n " , ' H ' );
+	_printf ( " Cadena: [ % s ] \ n " , " ¡Soy una cadena! " );
+	printf ( " Cadena: [ % s ] \ n " , " ¡Soy una cadena! " );
+	_printf ( " Dirección: [ % p ] \ n " , addr);
+	printf ( " Dirección: [ % p ] \ n " , addr);
+	len = _printf ( " Porcentaje: [ %% ] \ n " );
+	len2 = printf ( " Porcentaje: [ %% ] \ n " );
+	_printf ( " Len: [ % d ] \ n " , len);
+	printf ( " Len: [ % d ] \ n " , len2);
+	_printf ( " Desconocido: [% r] \ n " );
+	printf ( " Desconocido: [% r] \ n " );
+	retorno ( 0 );
 }
 ```
 
