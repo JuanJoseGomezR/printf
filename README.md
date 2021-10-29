@@ -100,7 +100,7 @@ $ ./a.out
 ```
 
 ## Screenshot
-![alt text](https://drive.google.com/file/d/1MR-KcRt_RzyzVzJEiKEhAm91CLeoplFi/view?usp=sharing)
+![alt text](https://ibb.co/b3TQBQB)
 ## AUTHOR:
 
 - Juan Jose Gómez Rodríguez 
