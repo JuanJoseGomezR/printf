@@ -100,7 +100,7 @@ $ ./a.out
 ```
 
 ## Screenshot
-![Alt text](C:\Users\OMEN\Desktop\Nueva carpeta "Optional Title")
+![alt text](C:\Users\OMEN\Desktop\Nueva carpeta "Optional Title")
 ## AUTHOR:
 
 - Juan Jose Gómez Rodríguez 
