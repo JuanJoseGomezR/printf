@@ -98,6 +98,9 @@ gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
 ```shell
 $ ./a.out
 ```
+
+## Screenshot
+![alt text](https://drive.google.com/file/d/1MR-KcRt_RzyzVzJEiKEhAm91CLeoplFi/view?usp=sharing)
 ## AUTHOR:
 
 - Juan Jose Gómez Rodríguez 
